@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from mcp_tools import query_policies
+from app.mcp_tools import query_policies
 
 app = FastAPI(title="Student Policy Chat")
 
@@ -13,3 +13,4 @@ def chat(req: ChatRequest):
     return {
         "answer": answer
     }
+
