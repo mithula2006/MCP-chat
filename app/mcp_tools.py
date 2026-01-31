@@ -1,4 +1,4 @@
-from db import get_connection
+from app.db import get_connection
 
 def query_policies(question: str) -> str:
     conn = get_connection()
@@ -19,3 +19,4 @@ def query_policies(question: str) -> str:
         return "No relevant policy found."
 
     return "\n\n".join(r[0] for r in rows)
+
